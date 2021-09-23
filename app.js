@@ -14,11 +14,13 @@ async function addGif(res) {
         const randGif = Math.floor(Math.random() * numGifs);
         newImg = document.createElement('IMG')
         newImg.setAttribute('src', res.data.data[randGif].images.downsized.url)
+        newImg.classList.add('img-fluid')
         gifs.append(newImg)
     }
 }
 
 searchButton.addEventListener('click', async function(e) {
+    e.preventDefault()
     const searchTerm = searchTermEl.value
     searchTermEl.value = ""
 

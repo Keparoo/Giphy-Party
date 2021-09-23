@@ -10,23 +10,35 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="container">
-            <div class="form-inline">
-                <div class="col-4">
-                    <input class="form-control" type="text" id="searchTerm" placeholder="Enter a search term">
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-success form-control" id="searchButton">Search Giphy!</button>
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-danger form-control" id="removeButton">Remove Images</button>
-                </div>
+
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">Gif Party!</a>
+
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="text" id="searchTerm" placeholder="Enter a search term"
+                aria-label="Search">
+
+            <button class="btn btn-success" id="searchButton">Search Giphy!</button>
+            <button class="btn btn-danger" id="removeButton">Remove Images</button>
+        </form>
+    </nav>
+
+    <!-- <div class="">
+        <div class="form-inline">
+            <div class="col-3">
+                <input class="form-control" type="text" id="searchTerm" placeholder="Enter a search term">
+            </div>
+            <div class="col-2">
+                <button class="btn btn-success form-control" id="searchButton">Search Giphy!</button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-danger form-control" id="removeButton">Remove Images</button>
             </div>
         </div>
+    </div> -->
 
-        <div class="container" id="gifs"></div>
-    </div>
+    <div class="container-fluid" id="gifs"></div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
