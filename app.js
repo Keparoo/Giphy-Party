@@ -10,10 +10,15 @@ const gifs = document.querySelector('#gifs')
 
 async function getGiphy(payload) {
     let res = await axios.get(baseUrl, {params: payload})
-    // console.log(res.data.data[0].images.downsized.url)
-    newImg = document.createElement('IMG')
-    newImg.setAttribute('src', res.data.data[0].images.downsized.url)
-    gifs.append(newImg)
+    const numGifs = res.data.data.length
+    console.log(numGifs)
+    if (numGifs) {
+        const randGif = Math.floor(Math.random() * numGifs);
+        newImg = document.createElement('IMG')
+        newImg.setAttribute('src', res.data.data[randGif].images.downsized.url)
+        gifs.append(newImg)
+    }
+
 }
 
 searchButton.addEventListener('click', function(e) {
