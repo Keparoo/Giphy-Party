@@ -3,15 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Giphy Party!</title>
 </head>
 
 <body>
-    <input type="text" id="searchTerm" placeholder="Enter a search term">
-    <button id="searchButton">Search Giphy!</button>
-    <button id="removeButton">Remove Images</button>
+    <div class="container">
+        <input class="form-control" type="text" id="searchTerm" placeholder="Enter a search term">
+        <button class="btn btn-success" id="searchButton">Search Giphy!</button>
+        <button class="btn btn-danger" id="removeButton">Remove Images</button>
+    </div>
 
-    <div id="gifs"></div>
+
+    <div class="container" id="gifs"></div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.js"></script>

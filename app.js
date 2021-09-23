@@ -16,7 +16,6 @@ async function addGif(res) {
         newImg.setAttribute('src', res.data.data[randGif].images.downsized.url)
         gifs.append(newImg)
     }
-
 }
 
 searchButton.addEventListener('click', async function(e) {
